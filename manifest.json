@@ -1,0 +1,15 @@
+{
+  "short_name": "GoldBuy",
+  "name": "GoldBuy Portal",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3655/3655465.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1D4ED8",
+  "background_color": "#f3f4f6"
+}

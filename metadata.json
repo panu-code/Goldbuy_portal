@@ -1,0 +1,7 @@
+{
+  "name": "GoldBuy Portal",
+  "description": "Employee portal for digitizing gold and silver purchase receipts via OCR.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>GoldBuy Portal</title>
+    
+    <!-- PWA Settings -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#1D4ED8" /> <!-- Updated theme color -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="GoldBuy" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom tweaks for mobile inputs to prevent zooming */
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+      body {
+        background-color: #f3f4f6;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Global Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes slideInFromRight {
+        from { transform: translateX(20px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+
+      @keyframes slideInFromBottom {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+
+      .animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
+      .animate-slideInFromRight { animation: slideInFromRight 0.3s ease-out forwards; }
+      .animate-slideInFromBottom { animation: slideInFromBottom 0.3s ease-out forwards; }
+
+      /* Custom button pulse animation for camera */
+      @keyframes pulse-once {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.03); }
+        100% { transform: scale(1); }
+      }
+      .animate-pulse-once {
+        animation: pulse-once 0.6s ease-in-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
