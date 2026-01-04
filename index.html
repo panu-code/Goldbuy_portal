@@ -67,14 +67,15 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>
     <!-- 
-      This script tag loads the main application.
-      The type="text/babel" tells our new translator to process this file.
-      The data-type="module" ensures our import statements work correctly.
+      FIX: Changed `data-type="module"` to the standard `type="module"`.
+      This is the primary fix for the white screen issue on GitHub Pages.
     -->
-    <script type="text/babel" data-type="module" src="index.tsx"></script>
-  </body>
+    <script type="text/babel" type="module" src="index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>
