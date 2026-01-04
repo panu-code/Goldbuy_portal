@@ -6,11 +6,14 @@
     <title>GoldBuy Portal</title>
     
     <!-- PWA Settings -->
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#1D4ED8" /> <!-- Updated theme color -->
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="GoldBuy" />
+
+    <!-- In-browser transpiler for JSX/TSX. This makes the app work on GitHub Pages. -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -64,10 +67,14 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <!-- 
+      This script tag loads the main application.
+      The type="text/babel" tells our new translator to process this file.
+      The data-type="module" ensures our import statements work correctly.
+    -->
+    <script type="text/babel" data-type="module" src="index.tsx"></script>
+  </body>
 </html>
