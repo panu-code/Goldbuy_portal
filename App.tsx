@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { DailyStats, SaleRecord, ExtractedData } from './types';
-import { Dashboard } from './components/Dashboard';
-import { EntryForm } from './components/EntryForm';
-import { HistoryView } from './components/HistoryView';
-import { BonusCalculatorView } from './components/BonusCalculatorView';
-import { InfoView } from './components/InfoView';
-import { UserSelectionScreen } from './components/UserSelectionScreen';
-import { isBonusSale, calculateNormalized14kWeight, calculateBonusAmount } from './components/ValidationUtils';
+import { DailyStats, SaleRecord, ExtractedData } from './types.ts';
+import { Dashboard } from './components/Dashboard.tsx';
+import { EntryForm } from './components/EntryForm.tsx';
+import { HistoryView } from './components/HistoryView.tsx';
+import { BonusCalculatorView } from './components/BonusCalculatorView.tsx';
+import { InfoView } from './components/InfoView.tsx';
+import { UserSelectionScreen } from './components/UserSelectionScreen.tsx';
+import { isBonusSale, calculateNormalized14kWeight, calculateBonusAmount } from './components/ValidationUtils.ts';
 import { Home, Calculator, CheckCircle, Save, Info, AlertCircle } from 'lucide-react';
 
 // --- CONFIGURATION ---
